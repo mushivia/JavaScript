@@ -87,7 +87,7 @@
                     score++;
                     if(!checkTexts.length)createText();
                 }
-                else if(e.key==="shift"){
+                else if(e.key==="Shift"){
                     wrap.style.backgroundColor="#666";
                     
                 }else{
@@ -96,7 +96,7 @@
             };// 入力判定
             
             const rankCheck=score=>{
-                let text='';
+                let text="";
                 
                 if(score<100){
                  text=`あなたのランクはCです。\nBランクまであと${100-score}文字です。`;
@@ -108,7 +108,7 @@
                  text=`あなたのランクはSです。\nおめでとうございます！`;
                 }
                 
-                return `${score}文字打てました！\n${text}\n【OK】リトライ/【キャンセル】終了`
+                return `${score}文字打てました！\n${text}\n【OK】リトライ/【キャンセル】終了`;
             };// ランク判定
             
             const gameOver=id=>{
@@ -119,7 +119,7 @@
             };// ゲーム終了
             
             const timer=()=>{
-                let time=60
+                let time=60;
                 const count=document.getElementById("count");
                 const id=setInterval(()=>{
                     if(time<=0)gameOver(id);
